@@ -25,7 +25,7 @@ public class Mo1Activity extends AppCompatActivity {
     private static final String CHILD_TEXT2 = "child_text2";//小组成员Map的第二个key
     String github10_5 = null;
     int yu = 111;
-    int yu1 = 222;
+    int yu1 = 2221;
     int yu2 = 333;
     List<Map<String, String>> groupData = new ArrayList<Map<String, String>>();//大组成员
     List<List<Map<String, String>>> childData = new ArrayList<List<Map<String, String>>>();//小组成员
