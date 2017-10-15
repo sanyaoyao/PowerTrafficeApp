@@ -125,7 +125,6 @@ public class Mo1Activity extends AppCompatActivity {
         public int getChildrenCount(int groupPosition) {
             return childData.get(groupPosition).size();
         }
-
         /**
          * Indicates whether the child and group IDs are stable across changes to the
          * underlying data.
