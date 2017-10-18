@@ -8,7 +8,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -112,15 +111,15 @@ public class Fragment_2 extends Fragment {
             @Override
             public void onResponse(JSONObject response) {
                 // TODO Auto-generated method stu
-                Log.i("TAG volley", response.toString());
-                Log.i("rrrr", response.optString("serverinfo"));
+//                Log.i("TAG volley", response.toString());
+//                Log.i("rrrr", response.optString("serverinfo"));
                 String str = response.optString("serverinfo");
                 if (pus == 1) {
                     try {
                         JSONArray sdf = new JSONArray(str);
                         JSONObject sdfg = sdf.getJSONObject(0);
                         String ddfgh = sdfg.getString("Distance");
-                        Log.i("rrrr", ddfgh);
+//                        Log.i("rrrr", ddfgh);
                         mTextViewd1.setText(ddfgh);
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -129,7 +128,7 @@ public class Fragment_2 extends Fragment {
                         JSONArray sdf = new JSONArray(str);
                         JSONObject sdfg = sdf.getJSONObject(1);
                         String ddfgh = sdfg.getString("Distance");
-                        Log.i("rrrr", ddfgh);
+//                        Log.i("rrrr", ddfgh);
                         mTextViewd2.setText(ddfgh);
                         car();
                     } catch (JSONException e) {
@@ -141,7 +140,7 @@ public class Fragment_2 extends Fragment {
                         JSONArray sdf = new JSONArray(str);
                         JSONObject sdfg = sdf.getJSONObject(0);
                         String ddfgh = sdfg.getString("Distance");
-                        Log.i("rrrr", ddfgh);
+//                        Log.i("rrrr", ddfgh);
                         mTextViewd3.setText(ddfgh);
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -150,7 +149,7 @@ public class Fragment_2 extends Fragment {
                         JSONArray sdf = new JSONArray(str);
                         JSONObject sdfg = sdf.getJSONObject(1);
                         String ddfgh = sdfg.getString("Distance");
-                        Log.i("rrrr", ddfgh);
+//                        Log.i("rrrr", ddfgh);
                         mTextViewd4.setText(ddfgh);
                         drt();
                     } catch (JSONException e) {
@@ -164,7 +163,7 @@ public class Fragment_2 extends Fragment {
             public void onErrorResponse(VolleyError error) {
                 // TODO Auto-generated method stub
                 Toast.makeText(getContext(), "失败", Toast.LENGTH_SHORT).show();
-                Log.i("TAG volley", error.toString());
+//                Log.i("TAG volley", error.toString());
 
             }
         });
@@ -219,7 +218,6 @@ public class Fragment_2 extends Fragment {
             goundl.put(key2, "2号（101）人");
             goundl.put(key3, t2 + "分钟");
             goundl.put(key4, "距离" + d2 + "m");
-
             son.add(goundl);
             goundl = new HashMap<>();
             goundl.put(key2, "1号（101）人");
