@@ -50,11 +50,6 @@ public class Fragment_2 extends Fragment {
     List<Map<String, Object>> groupData = new ArrayList<>();//大组成员
     List<List<Map<String, Object>>> childData = new ArrayList<>();//小组成员
     UrlBean urlBean;
-    private ImageView mImageViewF2Tubiao;
-    private TextView mTextViewBuy;
-    private TextView mTextViewF2Time1;
-    private TextView mTextViewF2Time;
-    private TextView mTextView88;
     private TextView mTextViewd1;
     private TextView mTextViewd2;
     private TextView mTextViewd3;
@@ -72,12 +67,7 @@ public class Fragment_2 extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mImageViewF2Tubiao = (ImageView) getActivity().findViewById(R.id.imageView_F2_tubiao);
-        mTextViewBuy = (TextView) getActivity().findViewById(R.id.textView_buy);
-        mTextViewF2Time1 = (TextView) getActivity().findViewById(R.id.textView_F2_time1);
-        mTextViewF2Time = (TextView) getActivity().findViewById(R.id.textView_F2_time_);
-        mTextView88 = (TextView) getActivity().findViewById(R.id.textView88);
-        mButton = (Button) getActivity().findViewById(R.id.button_F2);
+        initView();
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,12 +77,6 @@ public class Fragment_2 extends Fragment {
                 dialog.show();
             }
         });
-        mTextViewd1 = (TextView) getActivity().findViewById(R.id.textView_D1);
-        mTextViewd2 = (TextView) getActivity().findViewById(R.id.textView_D2);
-        mTextViewd3 = (TextView) getActivity().findViewById(R.id.textView_D3);
-        mTextViewd4 = (TextView) getActivity().findViewById(R.id.textView_D4);
-        mF2Expandable = (ExpandableListView) getActivity().findViewById(R.id.F2_Expandable);
-
         urlBean = Util.loadSetting(getContext());
         String urlHost = "http://" + urlBean.getUrl() + ":" + urlBean.getPort() + "/transportservice/type/jason/action/GetBusStationInfo.do";
         JSONObject jsonObject = new JSONObject();
@@ -104,6 +88,14 @@ public class Fragment_2 extends Fragment {
         pus = 1;
         getAllCarValue(urlHost, jsonObject);
         //List<Map<String, String>>  = new ArrayList<Map<String, String>>();
+    }
+    public void initView(){
+        mButton = (Button) getActivity().findViewById(R.id.button_F2);
+        mTextViewd1 = (TextView) getActivity().findViewById(R.id.textView_D1);
+        mTextViewd2 = (TextView) getActivity().findViewById(R.id.textView_D2);
+        mTextViewd3 = (TextView) getActivity().findViewById(R.id.textView_D3);
+        mTextViewd4 = (TextView) getActivity().findViewById(R.id.textView_D4);
+        mF2Expandable = (ExpandableListView) getActivity().findViewById(R.id.F2_Expandable);
     }
 
     private void getAllCarValue(String urlHostAction, JSONObject params) {
@@ -183,7 +175,6 @@ public class Fragment_2 extends Fragment {
         pus = 2;
         getAllCarValue(urlHost, jsonObject);
     }
-
     public void drt() {
         int d1 = Integer.parseInt(mTextViewd1.getText().toString());
         int d2 = Integer.parseInt(mTextViewd2.getText().toString());
@@ -262,7 +253,6 @@ public class Fragment_2 extends Fragment {
         mF2Expandable.setGroupIndicator(null);//不设置大组指示器图标，因为我们自定义设置了
         mF2Expandable.setDivider(null);//设置图片可拉伸的
     }
-
     class Listadpter extends BaseExpandableListAdapter {
         Context context;
 

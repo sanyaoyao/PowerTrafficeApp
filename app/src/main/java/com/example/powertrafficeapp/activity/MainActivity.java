@@ -67,15 +67,6 @@ public class MainActivity extends AppCompatActivity {
         });
         final String[] actionTexts = new String[]{
                 getString(R.string.res_left_wodezhanghu),
-                getString(R.string.res_left_zhanghuguanli),
-                getString(R.string.res_left_honglvdengguanli),
-                getString(R.string.res_left_wodezhanghu4),
-                getString(R.string.res_left_zhanghuguanli5),
-                getString(R.string.res_left_honglvdengguanli6),
-                getString(R.string.res_left_wodezhanghu7),
-                getString(R.string.res_left_zhanghuguanli8),
-                getString(R.string.res_left_chuanyi),
-                getString(R.string.res_left_exit)
         };
         int[] actionImages = new int[]{
                 R.drawable.btn_l_arrows,

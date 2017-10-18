@@ -82,6 +82,7 @@ public class lukou_fragment_1 extends Fragment {
         button = (Button) relativeLayout.findViewById(R.id.btn_shezhi);
         button.setVisibility(View.GONE);
         Ralativeee.addView(relativeLayout);
+
         urlHost = "http://" + urlBean.getUrl() + ":" + urlBean.getPort() + "/transportservice/type/jason/action/GetTrafficLightConfigAction.do";
         JSONObject object = new JSONObject();
         try {
@@ -313,7 +314,6 @@ public class lukou_fragment_1 extends Fragment {
             @Override
             public void onClick(View view) {
                 dialoge.dismiss();
-
             }
         });
         dialoge.show();
