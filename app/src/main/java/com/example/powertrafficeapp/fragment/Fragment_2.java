@@ -41,6 +41,7 @@ import java.util.Map;
 public class Fragment_2 extends Fragment {
     Listadpter sdf;
     int pus;
+    int z = 2;
     int id = 1;
     String key1 = "zhao";
     String key2 = "hong";
