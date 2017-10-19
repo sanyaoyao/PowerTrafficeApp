@@ -12,7 +12,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -61,29 +60,6 @@ public class lukou_fragment_3 extends Fragment {
     String lv5;
     Button button;
     CheckBox check;
-    private Button buttonF3Refer;
-    private Button buttonF3Pl;
-    private TextView textViewH1;
-    private TextView textViewL1;
-    private TextView textViewHu1;
-    private TextView textView57;
-    private TextView textViewH2;
-    private TextView textViewL2;
-    private TextView textViewHu2;
-    private TextView textView58;
-    private TextView textViewH3;
-    private TextView textViewL3;
-    private TextView textViewHu3;
-    private TextView textView56;
-    private TextView textViewH4;
-    private TextView textViewL4;
-    private TextView textViewHu4;
-    private TextView textView54;
-    private TextView textViewH5;
-    private TextView textViewL5;
-    private TextView textViewHu5;
-    private Button buttonBaocunF3;
-    private Button buttonQusiaoF3;
     private Button buttonCuo;
     private LinearLayout Ralativeee;
     private UrlBean urlBean;
@@ -350,7 +326,6 @@ public class lukou_fragment_3 extends Fragment {
                         hong1 = dfee.getString("RedTime");
                         huang1 = dfee.getString("YellowTime");
                         lv1 = dfee.getString("GreenTime");
-
                         shuju();
                     } catch (JSONException e) {
                         e.printStackTrace();
