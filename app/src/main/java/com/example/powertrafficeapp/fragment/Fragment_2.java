@@ -58,7 +58,8 @@ public class Fragment_2 extends Fragment {
     private ExpandableListView mF2Expandable;
     String zd= "zhangdi";
     String zd2= "zhangdi";
-
+    String zd3= "zhangdi";
+    String zd4= "zhangdi";
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
