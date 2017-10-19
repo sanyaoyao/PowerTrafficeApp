@@ -57,6 +57,7 @@ public class Fragment_2 extends Fragment {
     private Button mButton;
     private ExpandableListView mF2Expandable;
     String zd= "zhangdi";
+    String zd2= "zhangdi";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
